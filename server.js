@@ -2,10 +2,10 @@ import express from 'express';
 import cors from 'cors';
 const app = express()
 import path from 'path';
-import { fileURLToPath } from 'url';
-import { findCoordinateInTerritories } from '../../dist/src/turfFinder.js';
+const __dirname = import.meta.dirname;
+import { findCoordinateInTerritories } from './dist/src/turfFinder.js';
 
-
+// Enable CORS
 app.use(cors());
 
 // Enable parsing of URL-encoded data
@@ -14,9 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 // Enable parsing of JSON data
 app.use(express.json());
 
+// Serve static files
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(path.dirname(fileURLToPath(import.meta.url)), "../../index.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.post('/territories', async (req, res) => {

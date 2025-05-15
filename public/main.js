@@ -2,6 +2,7 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiZGV2Y2hleWFubmFncmFoYW0iLCJhIjoiY204c3hqMTAwMDR4ZzJqb2NtdG1yZjN2MyJ9.lxowAhD4XJN9-bIz0JGOyg";
 
 const main = () => {
+  console.log("main running")
   const coorForm = document.getElementById("coor-form");
   coorForm.addEventListener("submit", e => {
     e.preventDefault();
