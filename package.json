@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/server.js"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "description": "",
@@ -12,11 +14,11 @@
     "@turf/turf": "^7.2.0",
     "@types/mapbox-gl": "^3.4.1",
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mapbox-gl": "^3.11.0"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2",
-    "tsx": "^4.19.3",
     "typescript": "^5.8.3"
   }
 }
