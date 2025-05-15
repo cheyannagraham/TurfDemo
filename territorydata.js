@@ -1,3 +1,4 @@
+//@ts-nocheck
 export const territoryData = [
     {
         territoryid: '497252',

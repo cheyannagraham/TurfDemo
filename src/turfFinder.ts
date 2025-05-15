@@ -1,6 +1,6 @@
 import * as turf from "@turf/turf";
 
-import { territoryData } from "../territorydata";
+import { territoryData } from "../territorydata.js";
 
 export const findCoordinateInTerritories = (lng: number, lat: number) => {
   let point = turf.point([lng, lat]);
